@@ -211,5 +211,11 @@
         "name": "New Tour",
         "duration": "4",
         "difficulty": "easy"
+    },
+    {
+        "id": 10,
+        "name": "Istanbul",
+        "duration": "5",
+        "difficulty": "hard"
     }
 ]
