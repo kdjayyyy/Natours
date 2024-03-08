@@ -3,13 +3,21 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
+// MIDDLEWARES
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  next();
+});
+
+
+// need to convert the string data to json
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`));
 
-
-// CALLBACKS FOR THE HTTP REQUESTS...........................................................................
+// CALLBACKS FOR THE HTTP REQUESTS
 const getTours = (req, res) => {
   res.status(200).json({
     status: 'success',
+    requestTime: req.requestTime,
     result: tours.length,
     data: {
       tours
@@ -67,7 +75,7 @@ const updateTour = (req, res) => {
     }
   })
 }
-//.....................................................................................................
+
 
 app.get('/api/v1/tours', getTours);
 app.post('/api/v1/tours', createTour);
