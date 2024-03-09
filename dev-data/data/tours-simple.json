@@ -223,5 +223,19 @@
         "name": "Wallachia",
         "duration": "7",
         "difficulty": "medium"
+    },
+    {
+        "id": 12,
+        "name": "Budapest",
+        "duration": "7",
+        "difficulty": "medium",
+        "price": 23
+    },
+    {
+        "id": 13,
+        "name": "Chandni-Chowk",
+        "duration": "3",
+        "difficulty": "hard",
+        "price": 45
     }
 ]
