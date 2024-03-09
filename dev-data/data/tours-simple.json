@@ -217,5 +217,11 @@
         "name": "Istanbul",
         "duration": "5",
         "difficulty": "hard"
+    },
+    {
+        "id": 11,
+        "name": "Wallachia",
+        "duration": "7",
+        "difficulty": "medium"
     }
 ]
